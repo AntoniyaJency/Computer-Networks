@@ -14,26 +14,15 @@ public class ChatClient {
             String msgFromServer, msgFromClient;
 
             while (true) {
-                // Send message to server
+                
                 System.out.print("You: ");
                 msgFromClient = userInput.readLine();
                 out.println(msgFromClient);
 
-                if (msgFromClient.equalsIgnoreCase("exit")) {
-                    System.out.println("Chat ended.");
-                    break;
-                }
-
-                // Receive message from server
                 msgFromServer = in.readLine();
-                if (msgFromServer == null || msgFromServer.equalsIgnoreCase("exit")) {
-                    System.out.println("Server disconnected.");
-                    break;
-                }
+                
                 System.out.println("Server: " + msgFromServer);
             }
-
-            socket.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }

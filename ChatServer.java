@@ -17,27 +17,16 @@ public class ChatServer {
             String msgFromClient, msgFromServer;
 
             while (true) {
-                // Receive message from client
+               
                 msgFromClient = in.readLine();
-                if (msgFromClient == null || msgFromClient.equalsIgnoreCase("exit")) {
-                    System.out.println("Client disconnected.");
-                    break;
-                }
+                
                 System.out.println("Client: " + msgFromClient);
 
-                // Send message to client
                 System.out.print("You: ");
                 msgFromServer = serverInput.readLine();
                 out.println(msgFromServer);
 
-                if (msgFromServer.equalsIgnoreCase("exit")) {
-                    System.out.println("Chat ended.");
-                    break;
-                }
             }
-
-            client.close();
-            server.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
