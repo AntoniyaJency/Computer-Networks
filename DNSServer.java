@@ -38,7 +38,8 @@ public class DNSServer {
 
                 System.out.println("Sent: " + response + "\n");
                 
-            }  
+            }
+              
 
         } catch (Exception e) {
             e.printStackTrace();

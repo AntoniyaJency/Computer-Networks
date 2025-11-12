@@ -2,13 +2,13 @@ import java.io.*;
 import java.util.Scanner;
 
 public class DV {
-    public static void main(String args[]) throws IOException {
+    public static void main(String args[])  {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of nodes: ");
         int n = sc.nextInt();
-        int[][] cost = new int[n][n], 
-        distance = new int[n][n], 
-        nextHop = new int[n][n];
+        int[][] cost = new int[n][n];
+        int[][] distance = new int[n][n];
+        int[][] nextHop = new int[n][n];
 
         System.out.println("Enter the cost matrix (each row on a separate line, values separated by spaces):");
 
